@@ -4,8 +4,9 @@
 <xs:element name="Root">
 <xs:complexType>
 <xs:choice maxOccurs="unbounded">
-<xs:element name="Thing" minOccurs="0" maxOccurs="unbounded">
+<xs:element name="Lecarstva" minOccurs="0" maxOccurs="unbounded">
 <xs:complexType>
+<xs:sequence>
 <xs:element name="CodLecarstva" type="xs:int" />
 <xs:element name="NazvanieLecarstvaa" type="xs:string" />
 <xs:element name="Pocazaniya_k_Primeneniyu" type="xs:string" />
