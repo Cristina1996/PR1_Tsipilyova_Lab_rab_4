@@ -1,0 +1,145 @@
+<script>
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Root">
+<xs:complexType>
+<xs:choice maxOccurs="unbounded">
+<xs:element name="Thing" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="IDThing" type="xs:string" />
+<xs:element name="Count_Thing" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+</script>
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="XSD1.xsd"> Лекарственные средства <!—обратите внимание на ссылку на xsd —> <br />
+
+<Thing> <table border = "1"> <tr>
+<tr> <td> Лекарства </td> <td> Информация о лекарстве </td></tr>
+<td> <table border="1"> <tr>
+<td>Код лекарства</td>
+<td>Название лекарства</td>
+</tr>
+<tr>
+<td><Count_Thing>1</Count_Thing></td>
+<td><IDThing>Ромашка</IDThing></td>
+</tr>
+<tr>
+<td><Count_Thing>2</Count_Thing></td>
+<td><IDThing>Парацетамол</IDThing></td>
+</tr>
+<tr>
+<td><Count_Thing>3</Count_Thing></td>
+<td><IDThing>Ингалипт</IDThing></td>
+</tr>
+<tr>
+<td><Count_Thing>4</Count_Thing></td>
+<td><IDThing>Анаферон</IDThing></td>
+</tr>
+<tr>
+<td><Count_Thing>5</Count_Thing></td>
+<td><IDThing>Пертусин</IDThing></td>
+</tr>
+</table>
+<td> <table border="1"> 
+<tr>
+<td>Показания к применению</td>
+<td>Единица измерения</td>
+<td>Кол-во в упаковке</td>
+<td>Название производителя</td>
+</tr>
+<tr>
+<td><IDThing>Аллергия на растение</IDThing></td>
+<td><IDThing>200</IDThing></td>
+<td><IDThing>12</IDThing></td>
+<td><IDThing>Ромашка +</IDThing></td>
+</tr>
+<tr>
+<td><IDThing>Нет</IDThing></td>
+<td><IDThing>100</IDThing></td>
+<td><IDThing>10</IDThing></td>
+<td><IDThing>Tablets</IDThing></td>
+</tr>
+<tr>
+<td><IDThing>нет</IDThing></td>
+<td><IDThing>450</IDThing></td>
+<td><IDThing>1</IDThing></td>
+<td><IDThing>Ingalipt prod</IDThing></td>
+</tr>
+<tr>
+<td><IDThing>нет</IDThing></td>
+<td><IDThing>280</IDThing></td>
+<td><IDThing>12</IDThing></td>
+<td><IDThing>Tablets</IDThing></td>
+</tr>
+<tr>
+<td><IDThing>Аллергия</IDThing></td>
+<td><IDThing>300</IDThing></td>
+<td><IDThing>12</IDThing></td>
+<td><IDThing>Pertic</IDThing></td>
+</tr>
+<table>
+
+</Thing>
+</Root>
+
+<html>
+<head>
+<style>
+table, th, td {
+border: 1px solid black;
+border-collapse:collapse;
+}
+th, td {
+padding: 5px;
+}
+</style>
+</head>
+<body>
+<script>
+if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+xmlhttp = new XMLHttpRequest();
+}
+else {// code for IE6, IE5
+xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET", "XML2.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML;
+//начинаем движение по элементам первого уровня иерархии - Лекарство
+var sotrudnik = xmlDoc.getElementsByTagName("lecarstva");
+for (i = 0; i < sotrudnik.length; i++) {
+document.write("<tr><td>");
+document.write(sotrudnik[i].getElementsByTagName("Код лекарства")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(sotrudnik[i].getElementsByTagName("Название лекарства")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+//начинаем движение по подчиненным элементам - текущее лекарство
+var information = sotrudnik[i].getElementsByTagName("information");
+document.write("<table><tr><th>Показания к применению</th><th>Единица измерения</th><th>Кол-во в упаковке</th><th>Название производителя</th></tr>");
+for (j = 0; j < information.length; j++) {
+document.write("<tr><td>");
+document.write(information[j].getElementsByTagName("Показания к применению")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(information[j].getElementsByTagName("Единица измерения")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(information[j].getElementsByTagName("Кол-во в упаковке")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(Book[j].getElementsByTagName("Название производителя")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+}
+document.write("</table>"); //закрыли таблицу информации о текущем лекарстве
+document.write("</td></tr>"); //закрыли столбец
+20:46:46	
+и строку текущего автора
+}
+document.write("</table>"); //закрыли таблицу лекарств
+</script>
+</body>
+</html>
