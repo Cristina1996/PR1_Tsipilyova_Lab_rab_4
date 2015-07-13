@@ -1,0 +1,146 @@
+<script>
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Root">
+<xs:complexType>
+<xs:choice maxOccurs="unbounded">
+<xs:element name="Flower" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="CodFlower" type="xs:int" />
+<xs:element name="NameFlower" type="xs:string" />
+<xs:element name="ClassFlower" type="xs:string" />
+<xs:element name="AverageHeight" type="xs:int" />
+<xs:element name="Flowering" type="xs:boolean" />
+<xs:element name="AdditionalInformation" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+</script>
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="XSD3.xsd"> Справочник оборудования/приборов <!—обратите внимание на ссылку на xsd —> <br />
+<Flower> <table border = "1"> <tr>
+<tr> <td> Цветы </td> <td> Информация о цветах </td></tr>
+<td> <table border="1"> <tr>
+<td>Код цветка</td>
+<td>Название цветка</td>
+</tr>
+<tr>
+<td><Codflower>1</Codflower></td>
+<td><NameFlower>Гладиолус</NameFlower></td>
+</tr>
+<tr>
+<td><Codflower>2</Codflower></td>
+<td><NameFlower>Нарцисс</NameFlower></td>
+</tr>
+<tr>
+<td><Codflower>3</Codflower></td>
+<td><NameFlower>Роза</NameFlower></td>
+</tr>
+<tr>
+<td><Codflower>4</Codflower></td>
+<td><NameFlower>Лилия</NameFlower></td>
+</tr>
+<tr>
+<td><Codflower>5</Codflower></td>
+<td><NameFlower>Хризантема</NameFlower></td>
+</tr>
+</table>
+<td> <table border="1"> 
+<tr>
+<td>Сорт цветка</td>
+<td>Средняя высота</td>
+<td>Цветущий</td>
+<td>Дополнительная информация</td>
+</tr>
+<tr>
+<td><ClassFlower>Гладиолус Мюриэл</ClassFlower></td>
+<td><AverageHeight>1 м</AverageHeight></td>
+<td><Flowering>да</Flowering>
+<td><AdditionalInformation>вид многолетних травянистых растений семейства Ирисовые</AdditionalInformation></td>
+</tr>
+<tr>
+<td><ClassFlower>Нарцисс поэтический</ClassFlower></td>
+<td><AverageHeight>60 см</AverageHeight></td>
+<td><Flowering>да</Flowering>
+<td><AdditionalInformation>род однодольных растений из семейства амариллисовых</AdditionalInformation></td>
+</tr>
+<tr>
+<td><ClassFlower>Красная роза</ClassFlower></td>
+<td><AverageHeight>90 см</AverageHeight></td>
+<td><Flowering>да</Flowering>
+<td><AdditionalInformation>собирательное название видов и сортов представителей рода Шиповник</AdditionalInformation></td>
+</tr>
+<tr>
+<td><ClassFlower>Лилия белоснежная</ClassFlower></td>
+<td><AverageHeight>1 м</AverageHeight></td>
+<td><Flowering>да</Flowering>
+<td><AdditionalInformation>многолетнее луковичное растение</AdditionalInformation></td>
+</tr>
+<tr>
+<td><ClassFlower>Хризантема индийская</ClassFlower></td>
+<td><AverageHeight>50 см</AverageHeight></td>
+<td><Flowering>да</Flowering>
+<td><AdditionalInformation>род однолетних и многолетних травянистых растений семейства Астровые, или Сложноцветные, близкий к родам Тысячелистник и Пижма</AdditionalInformation</AdditionalInformation></td>
+</tr>
+<table>
+</Flower>
+</Root>
+<html>
+<head>
+<style>
+table, th, td {
+border: 1px solid black;
+border-collapse:collapse;
+}
+th, td {
+padding: 5px;
+}
+</style>
+</head>
+<body>
+<script>
+if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+xmlhttp = new XMLHttpRequest();
+}
+else {// code for IE6, IE5
+xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET", "XML3.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML;
+//начинаем движение по элементам первого уровня иерархии - Цветы
+var Flower = xmlDoc.getElementsByTagName("Flower");
+for (i = 0; i < Flower.length; i++) {
+document.write("<tr><td>");
+document.write(Flower[i].getElementsByTagName("Код цветка")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(Flower[i].getElementsByTagName("Название цветка")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+//начинаем движение по подчиненным элементам - текущий цветок
+var information = Flower[i].getElementsByTagName("information");
+document.write("<table><tr><th>Сорт
+21:33:55	
+цветка</th><th>Средняя высота</th><th>Цветущий</th><th>\Дополнительная информация</th></tr>");
+for (j = 0; j < information.length; j++) {
+document.write("<tr><td>");
+document.write(information[j].getElementsByTagName("Сорт цветка")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(information[j].getElementsByTagName("Средняя высота")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(information[j].getElementsByTagName("Цветущий")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+document.write(information[j].getElementsByTagName("Дополнительная информация")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+}
+document.write("</table>"); //закрыли таблицу информации о текущем цветке
+document.write("</td></tr>"); //закрыли столбец и строку текущего цветке
+}
+document.write("</table>"); //закрыли таблицу цветов
+</script>
+</body>
+</html>
