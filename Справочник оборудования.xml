@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="XSD2.xsd"> Справочник оборудования/приборов <!—обратите внимание на ссылку на xsd —> <br />
+
+<Pribor> <table border = "1"> <tr>
+<tr> <td> Приборы </td> <td> Информация о приборе </td></tr>
+<td> <table border="1"> <tr>
+<td>Код прибора</td>
+<td>Название прибора</td>
+</tr>
+<tr>
+<td><CodPribora>1</CodPribora></td>
+<td><NazvaniePribora>машина</NazvaniePribora></td>
+</tr>
+
+<tr>
+<td><CodPribora>2</CodPribora></td>
+<td><NazvaniePribora>пылесос</NazvaniePribora></td>
+</tr>
+
+<tr>
+<td><CodPribora>3</CodPribora></td>
+<td><NazvaniePribora>фен</NazvaniePribora></td>
+</tr>
+
+<tr>
+<td><CodPribora>4</CodPribora></td>
+<td><NazvaniePribora>миксер</NazvaniePribora></td>
+</tr>
+
+<tr>
+<td><CodPribora>5</CodPribora></td>
+<td><NazvaniePribora>стол</NazvaniePribora></td>
+</tr>
+
+</table>
+<td> <table border="1"> 
+<tr>
+<td>Тип прибора</td>
+<td>Дата производства</td>
+<td>Материально ответственное лицо</td>
+</tr>
+
+<tr>
+<td><TypePribora>механика</TypePribora></td>
+<td><DateProizvodstva>02.06.96</DateProizvodstva></td>
+<td><MaterialnoOtvetstvennoeFace>механики</MaterialnoOtvetstvennoeFace></td>
+</tr>
+
+<tr>
+<td><TypePribora>механика</TypePribora></td>
+<td><DateProizvodstva>25.06.14</DateProizvodstva></td>
+<td><MaterialnoOtvetstvennoeFace>изобретатели</MaterialnoOtvetstvennoeFace></td>
+</tr>
+
+<tr>
+<td><TypePribora>механика</TypePribora></td>
+<td><DateProizvodstva>05.11.12</DateProizvodstva></td>
+<td><MaterialnoOtvetstvennoeFace>изобретатели</MaterialnoOtvetstvennoeFace></td>
+</tr>
+
+<tr>
+<td><TypePribora>механика</TypePribora></td>
+<td><DateProizvodstva>01.01.16</DateProizvodstva></td>
+<td><MaterialnoOtvetstvennoeFace>изобретатели</MaterialnoOtvetstvennoeFace></td>
+</tr>
+
+<tr>
+<td><TypePribora>мебель</TypePribora></td>
+<td><DateProizvodstva>04.05.11</DateProizvodstva></td>
+<td><MaterialnoOtvetstvennoeFace>конструкторщики</MaterialnoOtvetstvennoeFace></td>
+</tr>
+<table>
+
+</Pribor>
+</Root>
