@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="XSD3.xsd"> Цветочная продукция <!—обратите внимание на ссылку на xsd —> <br />
+<Flower> <table border = "1"> <tr>
+<tr> <td> Цветы </td> <td> Информация о цветах </td></tr>
+<td> <table border="1"> <tr>
+<td>Код цветка</td>
+<td>Название цветка</td>
+</tr>
+<tr>
+<td><Codflower>1</Codflower></td>
+<td><NameFlower>Гладиолус</NameFlower></td>
+</tr>
+<tr>
+<td><Codflower>2</Codflower></td>
+<td><NameFlower>Нарцисс</NameFlower></td>
+</tr>
+<tr>
+<td><Codflower>3</Codflower></td>
+<td><NameFlower>Роза</NameFlower></td>
+</tr>
+<tr>
+<td><Codflower>4</Codflower></td>
+<td><NameFlower>Лилия</NameFlower></td>
+</tr>
+<tr>
+<td><Codflower>5</Codflower></td>
+<td><NameFlower>Хризантема</NameFlower></td>
+</tr>
+</table>
+<td> <table border="1"> 
+<tr>
+<td>Сорт цветка</td>
+<td>Средняя высота</td>
+<td>Цветущий</td>
+<td>Дополнительная информация</td>
+</tr>
+<tr>
+<td><ClassFlower>Гладиолус Мюриэл</ClassFlower></td>
+<td><AverageHeight>1 м</AverageHeight></td>
+<td><Flowering>да</Flowering></td>
+<td><AdditionalInformation>вид многолетних травянистых растений семейства Ирисовые</AdditionalInformation></td>
+</tr>
+<tr>
+<td><ClassFlower>Нарцисс поэтический</ClassFlower></td>
+<td><AverageHeight>60 см</AverageHeight></td>
+<td><Flowering>да</Flowering></td>
+<td><AdditionalInformation>род однодольных растений из семейства амариллисовых</AdditionalInformation></td>
+</tr>
+<tr>
+<td><ClassFlower>Красная роза</ClassFlower></td>
+<td><AverageHeight>90 см</AverageHeight></td>
+<td><Flowering>да</Flowering></td>
+<td><AdditionalInformation>собирательное название видов и сортов представителей рода Шиповник</AdditionalInformation></td>
+</tr>
+<tr>
+<td><ClassFlower>Лилия белоснежная</ClassFlower></td>
+<td><AverageHeight>1 м</AverageHeight></td>
+<td><Flowering>да</Flowering></td>
+<td><AdditionalInformation>многолетнее луковичное растение</AdditionalInformation></td>
+</tr>
+<tr>
+<td><ClassFlower>Хризантема индийская</ClassFlower></td>
+<td><AverageHeight>50 см</AverageHeight></td>
+<td><Flowering>да</Flowering></td>
+<td><AdditionalInformation>род однолетних и многолетних травянистых растений семейства Астровые, или Сложноцветные, близкий к родам Тысячелистник и Пижма</AdditionalInformation</AdditionalInformation></td>
+</tr>
+<table>
+</Flower>
+</Root>
