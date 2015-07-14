@@ -10,7 +10,7 @@
 
 <tr>
 <td><CodMedicine>1</CodMedicine></td>
-<td><NazvanieLecarstva>Ромашка</NazvanieLecarstva></td>
+<td><NazvanieLecarstva>Супрастин</NazvanieLecarstva></td>
 </tr>
 
 <tr>
@@ -43,38 +43,38 @@
 </tr>
 
 <tr>
-<td><Pocazaniya_k_Primeneniyu>Аллергия на растение</Pocazaniya_k_Primeneniyu></td>
-<td><EdinitsaIzmereniya>200</EdinitsaIzmereniya></td>
-<td><Kolichestvo_v_upakovke>12</Kolichestvo_v_upakovke></td>
-<td><NazvanieProizvoditelya>Ромашка</NazvanieProizvoditelya></td>
+<td><Pocazaniya_k_Primeneniyu>Кожный зуд</Pocazaniya_k_Primeneniyu></td>
+<td><EdinitsaIzmereniya>163</EdinitsaIzmereniya></td>
+<td><Kolichestvo_v_upakovke>20</Kolichestvo_v_upakovke></td>
+<td><NazvanieProizvoditelya>Фармацевтический завод ЭГИС</NazvanieProizvoditelya></td>
 </tr>
 
 <tr>
-<td><Pocazaniya_k_Primeneniyu>Нет</Pocazaniya_k_Primeneniyu></td>
-<td><EdinitsaIzmereniya>100</EdinitsaIzmereniya></td>
+<td><Pocazaniya_k_Primeneniyu>Гиперчувствительность,анемия</Pocazaniya_k_Primeneniyu></td>
+<td><EdinitsaIzmereniya>500</EdinitsaIzmereniya></td>
 <td><Kolichestvo_v_upakovke>10</Kolichestvo_v_upakovke></td>
-<td><NazvanieProizvoditelya>Таблетки</NazvanieProizvoditelya></td>
+<td><NazvanieProizvoditelya>Биосинтез ОАО</NazvanieProizvoditelya></td>
 </tr>
 
 <tr>
-<td><Pocazaniya_k_Primeneniyu>Нет</Pocazaniya_k_Primeneniyu></td>
-<td><EdinitsaIzmereniya>450</EdinitsaIzmereniya></td>
+<td><Pocazaniya_k_Primeneniyu>Гиперчувствительность</Pocazaniya_k_Primeneniyu></td>
+<td><EdinitsaIzmereniya>30</EdinitsaIzmereniya></td>
 <td><Kolichestvo_v_upakovke>1</Kolichestvo_v_upakovke></td>
-<td><NazvanieProizvoditelya>Ingalipt prod</NazvanieProizvoditelya></td>
+<td><NazvanieProizvoditelya>ДАВ Фарм</NazvanieProizvoditelya></td>
 </tr>
 
 <tr>
 <td><Pocazaniya_k_Primeneniyu>Нет</Pocazaniya_k_Primeneniyu></td>
-<td><EdinitsaIzmereniya>280</EdinitsaIzmereniya></td>
-<td><Kolichestvo_v_upakovke>12</Kolichestvo_v_upakovke></td>
-<td><NazvanieProizvoditelya>Таблетки</NazvanieProizvoditelya></td>
+<td><EdinitsaIzmereniya>10</EdinitsaIzmereniya></td>
+<td><Kolichestvo_v_upakovke>20</Kolichestvo_v_upakovke></td>
+<td><NazvanieProizvoditelya>НПФ «МАТЕРИА МЕДИКА ХОЛДИНГ</NazvanieProizvoditelya></td>
 </tr>
 
 <tr>
 <td><Pocazaniya_k_Primeneniyu>Аллергия</Pocazaniya_k_Primeneniyu></td>
-<td><EdinitsaIzmereniya>300</EdinitsaIzmereniya></td>
-<td><Kolichestvo_v_upakovke>12</Kolichestvo_v_upakovke></td>
-<td><NazvanieProizvoditelya>Pertic</NazvanieProizvoditelya></td>
+<td><EdinitsaIzmereniya>100</EdinitsaIzmereniya></td>
+<td><Kolichestvo_v_upakovke>1</Kolichestvo_v_upakovke></td>
+<td><NazvanieProizvoditelya>Дальхимфарм</NazvanieProizvoditelya></td>
 </tr>
 <table>
 
