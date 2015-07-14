@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+table, th, td {
+border: 1px solid black;
+border-collapse:collapse;
+}
+th, td {
+padding: 5px;
+}
+</style>
+</head>
+<body>
+<script>
+if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+xmlhttp = new XMLHttpRequest();
+}
+else {// code for IE6, IE5
+xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET", "Сотрудники.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML;
+//начинаем движение по элементам первого уровня иерархии - Сотрудники
+var sotrudnik = xmlDoc.getElementsByTagName("sotrudnik");
+for (i = 0; i < sotrudnik.length; i++) 
+{
+document.write("<tr><td>");
+document.write(sotrudnik[i].getElementsByTagName("CodSotrudnika")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(sotrudnik[i].getElementsByTagName("FamilyName")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+//начинаем движение по подчиненным элементам - текущий сотрудник
+var information = sotrudnik[i].getElementsByTagName("information");
+document.write("<table><tr><th>Имя</th><th>Отчество</th><th>Должность</th><th>Дата приема на работу</th></tr>");
+for (j = 0; j < information.length; j++) 
+{
+document.write("<tr><td>");
+document.write(information[j].getElementsByTagName("Name")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(information[j].getElementsByTagName("Otchestvo")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(information[j].getElementsByTagName("Dolzhnost")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(Book[j].getElementsByTagName("DatePriemaNaRabotu")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+}
+document.write("</table>"); //закрыли таблицу информации о текущем сотруднике
+</script>
+</body>
+</html>
