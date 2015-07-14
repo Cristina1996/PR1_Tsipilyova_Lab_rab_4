@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="XSD1.xsd"> Сотрудники <!—обратите внимание на ссылку на xsd —> <br />
+
+<Sotrudnik> <table border = "1"> <tr>
+<tr> <td> Сотрудник </td> <td> Информация о сотруднике </td></tr>
+<td> <table border="1"> <tr>
+<td>Код сотрудника</td>
+<td>Фамилия</td>
+</tr>
+
+<tr>
+<td><CodSotrudnika>001</CodSotrudnika></td>
+<td><FamilyName>Кокорин</FamilyName></td>
+</tr>
+
+<tr>
+<td><CodSotrudnika>002</CodSotrudnika></td>
+<td><FamilyName>Комаров</FamilyName></td>
+</tr>
+
+<tr>
+<td><CodSotrudnika>003</CodSotrudnika></td>
+<td><FamilyName>Макарова</FamilyName></td>
+</tr>
+
+<tr>
+<td><CodSotrudnika>004</CodSotrudnika></td>
+<td><FamilyName>Кукушкина</FamilyName></td>
+</tr>
+
+<tr>
+<td><CodSotrudnika>005</CodSotrudnika></td>
+<td><FamilyName>Кривошейн</FamilyName></td>
+</tr>
+</table>
+
+<td> <table border="1"> 
+<tr>
+<td>Имя</td>
+<td>Отчество</td>
+<td>Должность</td>
+<td>Дата приема на работу</td>
+</tr>
+
+<tr>
+<td><Name>Алексей</Name></td>
+<td><Otchestvo>Георгиевич</Otchestvo></td>
+<td><Dolzhnost>Чикировщик</Dolzhnost></td>
+<td><DatePriemaNaRabotu>01.12.11</DatePriemaNaRabotu></td>
+</tr>
+
+<tr>
+<td><Name>Максим</Name></td>
+<td><Otchestvo>Ильич</Otchestvo></td>
+<td><Dolzhnost>Программист</Dolzhnost></td>
+ <td><DatePriemaNaRabotu>24.06.04</DatePriemaNaRabotu></td>
+</tr>
+
+<tr>
+<td><Name>Кристина</Name></td>
+<td><Otchestvo>Сергеевна</Otchestvo></td>
+<td><Dolzhnost>Бухгалтер</Dolzhnost></td>
+ <td><DatePriemaNaRabotu>01.03.10</DatePriemaNaRabotu></td>
+</tr>
+
+<tr>
+<td><Name>Марина</Name></td>
+<td><Otchestvo>Володаровна</Otchestvo></td>
+<td><Dolzhnost>Зам.директора</Dolzhnost></td>
+<td><DatePriemaNaRabotu>15.06.97</DatePriemaNaRabotu></td>
+</tr>
+
+<tr>
+<td><Name>Владимир</Name></td>
+<td><Otchestvo>Маркович</Otchestvo></td>
+<td><Dolzhnost>Электрик</Dolzhnost></td>
+<td><DatePriemaNaRabotu>05.12.14</DatePriemaNaRabotu></td>
+</tr>
+<table>
+
+</Sotrudnik>
+</Root>
