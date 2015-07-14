@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+table, th, td {
+border: 1px solid black;
+border-collapse:collapse;
+}
+th, td {
+padding: 5px;
+}
+</style>
+</head>
+<body>
+<script>
+if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+xmlhttp = new XMLHttpRequest();
+}
+else {// code for IE6, IE5
+xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET", "Цветочная продукция.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML;
+//начинаем движение по элементам первого уровня иерархии - Цветы
+var Flower = xmlDoc.getElementsByTagName("Flower");
+for (i = 0; i < Flower.length; i++) 
+{
+document.write("<tr><td>");
+document.write(Flower[i].getElementsByTagName("CodFlower")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(Flower[i].getElementsByTagName("NameFlower")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+//начинаем движение по подчиненным элементам - текущий цветок
+var information = Flower[i].getElementsByTagName("information");
+document.write("<table><tr><th>Сорт цветка</th><th>Средняя высота</th><th>Цветущий</th><th>\Дополнительная информация</th></tr>");
+for (j = 0; j < information.length; j++) 
+{
+document.write("<tr><td>");
+document.write(information[j].getElementsByTagName("ClassFlower")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(information[j].getElementsByTagName("AverageHeight")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(information[j].getElementsByTagName("Flowering")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+document.write(information[j].getElementsByTagName("AdditionalInformation")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+}
+document.write("</table>"); //закрыли таблицу информации о текущем цветке
+</script>
+</body>
+</html>
