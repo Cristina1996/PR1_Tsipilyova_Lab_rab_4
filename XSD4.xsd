@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Root">
+<xs:complexType>
+<xs:choice maxOccurs="unbounded">
+<xs:element name="Medicine" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="information" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="CodLecarstva" type="xs:string" />
+<xs:element name="NazvanieLecarstva" type="xs:int" />
+<xs:element name="Pocazaniya_k_Primeneniyu" type="xs:string" />
+<xs:element name="EdinitsaIzmereniya" type="xs:string" />
+<xs:element name="Kolichestvo_v_upakovke" type="xs:string" />
+<xs:element name="NazvanieProizvoditelya" type="xs:date" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:choice>
+</xs:complexType>
+</xs:element>
+</xs:schema>
